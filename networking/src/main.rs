@@ -1,5 +1,5 @@
-use std::net::{TcpListener, TcpStream, Ipv4Addr, SocketAddr};
-use std::io::{Read, Write, Result};
+use std::net::{TcpListener, TcpStream};
+use std::io::{Read};
 
 fn main(){
     // let ip = Ipv4Addr::new(127, 0, 0, 1);
