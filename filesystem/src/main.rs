@@ -1,7 +1,7 @@
 use std::fs;
-use std::fs::File;
+//use std::fs::File;
 use std::path::Path;
-use std::io::prelude::*;
+//use std::io::prelude::*;
 extern crate walkdir;
 use walkdir::WalkDir;
 
@@ -47,10 +47,10 @@ fn get_files() {
 }
 
 
-fn read_file() -> Result<String, std::io::Error> {
-    let path = Path::new("data/hello.txt");
-    let mut file = File::open(&path)?;
-    let mut s = String::new();
-    file.read_to_string(&mut s)?;
-    Ok(s)
-}
+// fn read_file() -> Result<String, std::io::Error> {
+//     let path = Path::new("data/hello.txt");
+//     let mut file = File::open(&path)?;
+//     let mut s = String::new();
+//     file.read_to_string(&mut s)?;
+//     Ok(s)
+// }
