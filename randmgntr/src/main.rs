@@ -1,4 +1,6 @@
 use rand::RngExt;
+use rand::rng;
+use rand::distributions::{Distribution, distributions::Uniform};
 
 fn main() {
     // create a random number generator
@@ -11,9 +13,21 @@ fn main() {
     println!("Random u16: {}", n2);
     println!("Random u32: {}", rng.random::<u32>());
     println!("Random i32: {}", rng.random::<i32>());
+    println!("Random float: {}", rng.random::<f64>());
 
     // random within range
     println!("Integer[0-10]: {}", rng.random_range(0..10));    // not including 10
     println!("Float: {}", rng.random_range(0.0..10.0));
+
+
+    // using uniform distribution may be more efficient when generating many random numbers in the same range
+    let dice: Uniform<i32> = Uniform::from(1..=6);
+    loop {
+        let roll: i32 = dice.sample(&mut rng);
+        println!("You rolled a {}", roll);
+        if roll == 6 {
+            break;
+        }
+    }
 
 }
