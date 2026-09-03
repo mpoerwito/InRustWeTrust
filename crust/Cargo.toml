@@ -4,4 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-clap = { version = "4.0", features = ["derive"] }
+# clap is the most popular Rust CLI argument parsing library.
+# The "derive" feature enables the #[derive(Parser)] macro used in main.rs.
+clap = { version = "4", features = ["derive"] }
